@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maurya English Institute Jehanabad - Premier English coaching with expert faculty, comprehensive courses, and proven results">
+    <title>Maurya English Institute - Best English Coaching in Jehanabad</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #3498db;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --success-color: #27ae60;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        .main-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--light-color);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .address {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            margin: 2rem auto;
+            color: var(--dark-color);
+            text-align: center;
+            max-width: 800px;
+            padding: 0 1rem;
+            position: relative;
+        }
+
+        .hero-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--secondary-color);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        /* Video + Image Slider Section */
+        .media-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            max-width: 1200px;
+        }
+
+        .image-slider {
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            border: 3px solid var(--primary-color);
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-track {
+            display: flex;
+            animation: scroll 12s linear infinite;
+            width: calc(250px * 4);
+        }
+
+        .slide-track img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-250px * 2)); }
+        }
+
+        .promo-video {
+            border: 4px solid var(--primary-color);
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Batch Timings */
+        .batch-section {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 0.5rem auto;
+            border-radius: 2px;
+        }
+
+        .batch-times {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .batch-box {
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            min-width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .batch-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .time-grey { background: #7f8c8d; }
+        .time-orange { background: #e67e22; }
+        .time-blue { background: #3498db; }
+        .time-pink { background: #e84393; }
+        .time-crimson { background: #e74c3c; }
+        .time-red { background: #c0392b; }
+
+        /* Features Section */
+        .features-section {
+            background-color: var(--light-color);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .features-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .marathon {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .features {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .features li {
+            background: rgba(52, 152, 219, 0.1);
+            padding: 1rem;
+            border-radius: 6px;
+            transition: transform 0.3s ease;
+            font-weight: 500;
+        }
+
+        .features li:hover {
+            transform: scale(1.03);
+            background: rgba(52, 152, 219, 0.2);
+        }
+
+        /* Links Section */
+        .links-section {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .links a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+        }
+
+        .links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(231, 76, 60, 0.3);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .media-section {
+                flex-direction: column;
+            }
+
+            .image-slider {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+                aspect-ratio: 1/1;
+            }
+
+            .slide-track {
+                width: calc(100% * 4);
+            }
+
+            .slide-track img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1/1;
+            }
+
+            .promo-video {
+                width: 100%;
+                height: auto;
+            }
+
+            .batch-box {
+                min-width: 100%;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animated {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">Maurya English Institute Jehanabad</div>
+        <div class="address">ADDRESS: SHIV SHANKAR HALL NEAR S.K.M. COLLEGE JEHANABAD</div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#batchesTiming"><b>Batches Timing</b></a></li>
+                <li><a href="#features"><b>Courses</b></a></li>
+                <li><a href="#contact"><b>Contact</b></a></li>
+                <li><a href="https://forms.gle/yFng81EXos8CEryP7" target="_blank"><b>Admission</b></a></li>
+                <li><a href="http://www.youtube.com/@Aryan_maurya79" target="_blank"><b>YouTube</b></a></li>
+                <li><a href=https://www.instagram.com/aryan_0_maurya?utm_source=ig_web_button_share_sheet&igsh=M3Y3OW56Y291cm80" target="_blank"><b>Instagram</b></a></li>
+                <li><a href=https://t.me/maurya24680English><b>Telegram</b></a></li>
+                
+
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="hero-title animated">WELCOME TO MAURYA ENGLISH INSTITUTE JEHANABAD</h1>
+
+    <div class="media-section">
+        <!-- Left Image Slider -->
+        <div class="image-slider animated delay-1">
+            <div class="slide-track">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\sir.jpg" alt="Students learning in classroom">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\book celarabation.jpg" alt="Teacher explaining concept">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\party.jpg" alt="Group study session">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\one.jpg" alt="toppers celarabate">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\two.jpg" alt="12th toppers">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\thre.jpg" alt="external toppers">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\four.jpg" alt="test toppers">
+            </div>
+        </div>
+
+        <!-- Center Video -->
+        <video controls width="500" height="280" autoplay muted loop class="promo-video animated delay-2">
+            <source src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Right Image Slider -->
+        <div class="image-slider animated delay-3">
+            <div class="slide-track">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\one.jpg" alt="Successful students">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\two.jpg" alt="Institute event">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\party.jpg" alt="Expert faculty">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\one.jpg" alt="toppers celarabate">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\two.jpg" alt="12th toppers">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\thre.jpg" alt="Institute building">
+                <img src="C:\Users\MD ARHAAN\Desktop\MAURYA ENGLISH\four.jpg" alt="Institute building">  
+            </div>
+        </div>
+    </div>
+
+    <section id="batchesTiming" class="batch-section">
+        <h2 class="section-title">Our Batch Timings</h2>
+        <div class="batch-times">
+            <div class="batch-box time-grey">12th Standard: 06:00 - 07:00 AM</div>
+            <div class="batch-box time-orange">11th Standard: 07:00 - 08:00 AM</div>
+            <div class="batch-box time-blue">12th Standard: 08:00 - 09:00 AM</div>
+            <div class="batch-box time-pink">11th Standard: 09:00 - 10:00 AM</div>
+            <div class="batch-box time-crimson">12th Standard: 04:00 - 05:00 PM</div>
+            <div class="batch-box time-red">11th Standard: 05:00 - 06:00 PM</div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="features-box">
+            <p class="marathon">Sunday Marathon Class - 4 Hours Intensive Learning</p>
+            <ul class="features">
+                <li><b>Basic English Foundation 🌎</b></li>
+                <li><b>Comprehensive Grammar 📚</b></li>
+                <li><b>Literature Expert Guidance 🏆</b></li>
+                <li><b>Easy Preposition Learning 💡</b></li>
+                <li><b>Regular Monthly Tests 📝</b></li>
+                <li><b>Practice Sets & Mock Exams ⌛</b></li>
+                <li><b>Chapter-wise Marathon Classes 🎯</b></li>
+                <li><b>Doubt Clearing Sessions ❓</b></li>
+                <li><b>Personalized Attention 👨‍🏫</b></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="links-section">
+        <h2 class="section-title">Quick Links</h2>
+        <div class="links">
+            <a href="https://forms.gle/yFng81EXos8CEryP7" target="_blank">Admission Form</a>
+            <a href="https://maps.app.goo.gl/cjquGKANRsRxdWC18" target="_blank">Location Map</a>
+            <a href="https://drive.google.com/file/d/1imCx9Gi7WHdtdqikj_RmRhM5xLBwlJFC/view" target="_blank">Sample Notes PDF</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title" style="color: white;">Contact Us</h2>
+        <div class="contact-info">
+            <span>📞 Call for queries:</span>
+            <a href="tel:7903624906">7903624906</a>
+        </div>
+        <div class="contact-info">
+            <span>📧 Email:</span>
+            <a href="mailto:mauryaenglish@gmail.com">mauryaenglish@gmail.com</a>
+        </div>
+        
+        <div class="social-links">
+            <a href="http://www.youtube.com/@Aryan_maurya79" target="_blank" aria-label="YouTube">📺</a>
+            <a href="https://t.me/maurya24680English" target="_blank" aria-label="Telegram">📢</a>
+            <a href="https://www.instagram.com/aryan_0_maurya" target="_blank" aria-label="Instagram">📷</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        &copy; 2023 Maurya English Institute Jehanabad. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
